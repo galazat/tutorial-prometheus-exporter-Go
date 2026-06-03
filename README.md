@@ -57,16 +57,16 @@
 
 ### Часть I. Основы Prometheus (только Go, без Kafka)
 
-1. [Теория: Prometheus и экспортеры]() - pull-модель, формат экспозиции, типы метрик, лейблы, naming convention.
+1. [Теория: Prometheus и экспортеры](01-prometheus-i-exporters/Part-1-theory-prometheus-i-exporter.md) - pull-модель, формат экспозиции, типы метрик, лейблы, naming convention.
 2. [Окружение и первый HTTP-сервер]() - `go mod init`, `net/http`, эндпоинты `/metrics` и `/healthz`.
 3. [Первая метрика через client_golang]() - `prometheus`, `promhttp`, дефолтные `go_*`/`process_*` метрики.
 4. [Паттерн Custom Collector]() - `Describe`/`Collect`, `NewDesc`, `MustNewConstMetric`. Ключевой паттерн всех exporter'ов.
 
 ### Часть II. Собираем метрики Kafka
 
-5. [Подключение к Kafka через Sarama](05-podklyuchenie-k-kafka-sarama.md) - клиент Sarama, локальная Kafka в docker compose, скелет `Exporter`.
-6. [Метрики брокеров и топиков]() -  `kafka_brokers`, `kafka_topic_partitions`, current/oldest offset.
-7. [Consumer groups и lag]() - самое важное: что такое offset и lag, как их посчитать, метрики групп.
+1. [Подключение к Kafka через Sarama]() - клиент Sarama, локальная Kafka в docker compose, скелет `Exporter`.
+2. [Метрики брокеров и топиков]() -  `kafka_brokers`, `kafka_topic_partitions`, current/oldest offset.
+3. [Consumer groups и lag]() - самое важное: что такое offset и lag, как их посчитать, метрики групп.
 
 ### Часть III. Делаем «как в проде»
 
